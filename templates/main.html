@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <head>
 	<title>Current Treehouse Status</title>
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: pink">
 	<h1>TreeHouse Device listing and status</h1>
-	
+
 	{% for pin in pins %}
 	<p>The {{pins[pin].name }}
 	{% if pins[pin].state == true %}
-		is currently off (<a href="/{{pin}}/off">turn on</a>)
+		is currently off is currently on <button type="button" class="btn btn-warning"><a href="/{{pin}}/on">turn on</a></button>
 	{% else %}
-		is currently on (<a href="/{{pin}}/on">turn off</a>)
+		is currently on <button type="button" class="btn btn-success"><a href="/{{pin}}/on">turn off</a></button>
 	{% endif %}
 	</p>
 	{% endfor %}
-	
+
 	{% if message %}
 	<h2>{{ message }}</h2>
 	{% endif %}
-	
+
 </body>
 </html>
