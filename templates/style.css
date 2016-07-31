@@ -1,3 +1,11 @@
-.background {
-  background-color: purple;
+.button-on {
+  color: ##e2e6e9
+  border-radius: 20px;
+  text-color: #7c8e9c;
+}
+
+.button-off {
+  color: ##e2e6e9
+  border-radius: 8px;
+  text-color: #7c8e9c;
 }

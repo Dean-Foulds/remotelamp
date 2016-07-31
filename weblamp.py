@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 
 pins = {
 	4 : {'name' : 'kettle', 'state' : GPIO.LOW},
-  7 : {'name' : 'flower_lamp', 'state' : GPIO.LOW}
+  7 : {'name' : 'flower lamp', 'state' : GPIO.LOW}
 	}
 
 for pin in pins:
